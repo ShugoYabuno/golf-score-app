@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background:
+    radial-gradient(circle at top left, rgba(219, 193, 142, 0.18), transparent 24%),
+    radial-gradient(circle at right 15%, rgba(77, 111, 88, 0.16), transparent 22%),
+    linear-gradient(180deg, #f7f2e8 0%, #edf1e7 52%, #eef0e8 100%);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #182218;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0)),
+    transparent;
+}
+
+::selection {
+  background: rgba(51, 92, 67, 0.18);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgba(51, 92, 67, 0.6);
+  outline-offset: 2px;
+}
+
+.fade-up {
+  animation: fade-up 420ms ease-out both;
+}
+
+.font-display {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  letter-spacing: 0.02em;
+}
+
+.paper-panel {
+  background:
+    linear-gradient(180deg, rgba(255, 252, 247, 0.94), rgba(248, 244, 235, 0.9)),
+    rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  box-shadow:
+    0 24px 60px rgba(24, 34, 24, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.glass-forest {
+  background:
+    radial-gradient(circle at top left, rgba(223, 197, 150, 0.18), transparent 28%),
+    linear-gradient(135deg, rgba(31, 57, 42, 0.98), rgba(18, 31, 23, 0.96));
+  box-shadow:
+    0 28px 64px rgba(14, 24, 17, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.gold-pill {
+  background: linear-gradient(135deg, #d8c099, #b99863);
+  color: #1b241b;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32);
+}
+
+.ink-button {
+  background: linear-gradient(135deg, #25372a, #162219);
+  box-shadow:
+    0 16px 36px rgba(22, 34, 25, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.dial-arrow {
+  animation: dial-pulse 1.2s ease-in-out infinite;
+}
+
+.celebrate-pop {
+  animation: celebrate-pop 340ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dial-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 0.78;
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes celebrate-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.82) translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
