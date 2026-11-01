@@ -143,3 +143,10 @@ UI/UX方針は `.cursor/rules/golf-score-ui-ux.mdc` と同一意図で運用し�
 - 比較条件が混ざっていないか。
 - 画面の主目的は1つに絞れているか。
 - 完了時に軽い達成感を返せているか。
+
+## Cursor Cloud specific instructions
+
+- Flutter 3.41.7（Dart 3.11.5、フレームワーク revision `cc0734ac71`）は `/opt/flutter` にインストール済み。`flutter` と `dart` は `/usr/local/bin` から使える。
+- アプリは `flutter_app/`。依存関係の更新は `cd flutter_app && flutter pub get`。
+- 動作確認は `flutter_app` で `flutter test`。`flutter analyze` は、既存の `lib/domain/progress.dart` にある未使用変数の警告で終了コードが非ゼロになる。
+- Android SDK と、Linux デスクトップビルドに必要な ninja / GTK 開発ライブラリは入っていない。Chrome はある。リポジトリには `web/` ランナーがない。ブラウザで UI を見るときは `flutter_app` で `flutter create --platforms=web .` を実行し、続けて `flutter run -d web-server --web-hostname 0.0.0.0 --web-port 8080`。生成された `web/` と `.metadata` の差分はコミットしない。
